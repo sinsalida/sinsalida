@@ -10,9 +10,16 @@
 		body
 		{
 			cursor:crosshair;
-			background-image:url("img/img001.jpg");
-			background-size:100%;
 			margin:0;
+			background-size:100%;
+		}
+
+		#background
+		{
+			background-size:100%;
+			width:110%;
+			height:auto;
+			position:fixed;
 		}
 
 		#full
@@ -57,8 +64,17 @@
 		
 	</style>
 </head>
-<body>
-	<a id="full" href="2.html">
+<body id="random-bg">
+
+	<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js'></script>
+
+<script>
+    var images = ['001.jpg'];
+    
+    $('<img id="background" src="img/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#random-bg');
+</script>
+
+	<a id="full" href="/">
   <div id="fulldiv">
   </div>
 </a>
